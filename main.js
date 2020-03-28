@@ -75,6 +75,12 @@ var useFirstname = users.filter(function(f){
 console.log("useFirstname",useFirstname );
 
 //Remove all the people aged greater than 35
+users = users.filter(function(returnableObjects){
+    return returnableObjects.age < 35 
+});
+       
+console.log("users",users)
+
 
 
 //Add new 2 random users to first/last in current list (one first, one last)
