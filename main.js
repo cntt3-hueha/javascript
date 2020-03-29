@@ -81,6 +81,23 @@ users = users.filter(function(returnableObjects){
        
 console.log("users",users)
 
-
-
 //Add new 2 random users to first/last in current list (one first, one last)
+let id = Date.now() + ( (Math.random()*100000).toFixed());
+    let firstname = randomItem(firstNames); 
+    let lastname = randomItem(lastNames);
+    let gender = randomItem(genders);
+    let age = randomAge(20,40);
+    let birthDay = randomDate(new Date(1980, 0, 1), new Date());
+
+    
+    let addnewUsers = {
+        'id': id,
+        'firstname': firstname,
+        'lastname': lastname,
+        'age': age,
+        'gender': gender,
+        'birthday': birthDay,
+    };
+    const addUsers = [addnewUsers].concat(users);
+    addUsers.push(addnewUsers);
+    console.log(addUsers);
